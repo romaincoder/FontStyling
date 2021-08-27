@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+        * {}
+        
+        .main {
+            text-align: center;
+            justify-content: center;
+            /* border: 2px solid blue; */
+            height: 300px;
+            width: 200px;
+            margin: 100px auto;
+            /* background-color: cadetblue; */
+            box-shadow: 0px 2px 5px black;
+            border-radius: 8px;
+            /* position: fixed; */
+        }
+        
+        #ans,
+        #ans1 {
+            border-radius: 4px;
+        }
+        
+        #ans {
+            font-family: 'Besley', serif;
+        }
+        
+        #ans1 {
+            font-family: 'Rampart One', cursive;
+        }
+        
+        design {
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+
+        <label for="Search">Search</label><br>
+        <input type="text" id="Search" value="" onkeyup="myFunction()" placeholder="Enter Text Is Here !!!"><br><br>
+
+
+
+
+        <design id="ans" value="Fontstyle">
+            Fontstyle
+        </design><br><br>
+
+        <design id="ans1" value="Fontstyle">
+            Fontstyle
+        </design><br><br>
+
+
+
+
+
+
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var fn = document.getElementById("Search").value;
+
+            document.getElementById("ans").innerHTML =
+                fn;
+            document.getElementById("ans1").innerHTML =
+                fn;
+
+        }
+    </script>
+
+    <!-- Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+
+    <p>My name is: <span id="demo"></span></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname").value;
+            document.getElementById("demo").innerHTML = x;
+        }
+    </script> -->
+</body>
+
+</html>
