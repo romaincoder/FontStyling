@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* lable  */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap');
+        /* lable  */
+        
         @import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@1,500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
@@ -16,13 +21,34 @@
             text-align: center;
             justify-content: center;
             /* border: 2px solid blue; */
-            height: 300px;
-            width: 200px;
-            margin: 100px auto;
+            height: 100vh;
+            width: 100vw;
+            /* margin: 100px auto; */
             /* background-color: cadetblue; */
             box-shadow: 0px 2px 5px black;
             border-radius: 8px;
             /* position: fixed; */
+        }
+        
+        .search_style {
+            background: linear-gradient(#61045F, #AA076B);
+            letter-spacing: 7px;
+        }
+        
+        .search_style>label {
+            font-family: 'Besley', serif;
+            /* font-size: 30px; */
+            /* margin: 200px 0px; */
+            color: white;
+        }
+        
+        input {
+            outline: wheat;
+            font-family: 'Dancing Script', cursive;
+            width: 50%;
+            padding: 5px;
+            margin-top: 5px;
+            text-align: center;
         }
         
         #ans,
@@ -52,23 +78,25 @@
 <body>
     <div class="main">
 
+        <div class="search_style">
+            <label for="Search">StylingText</label><br>
+            <input type="text" id="Search" value="" onkeyup="myFunction()" placeholder="Enter Text Is Here or Paste !!!"><br><br>
 
-        <label for="Search">Search</label><br>
-        <input type="text" id="Search" value="" onkeyup="myFunction()" placeholder="Enter Text Is Here !!!"><br><br>
+        </div>
 
 
-
-
-        <design id="ans" value="Fontstyle">
+        <design id="ans" value="">
             Fontstyle
         </design><br><br>
 
-        <design id="ans1" value="Fontstyle">
+        <design id="ans1" value="">
             Fontstyle
         </design><br><br>
 
-        <design id="ans2" value="Fontstyle">
-            Fontstyle
+
+
+        <design id="ans2" value="">
+            Fontsyle
         </design><br><br>
 
 
@@ -78,30 +106,33 @@
     </div>
 
     <script>
+        let text = "Fontstyle";
+
+
+
         function myFunction() {
 
             var fn = document.getElementById("Search").value;
+            if (fn.length > 0) {
 
-            document.getElementById("ans").innerHTML =
-                fn;
-            document.getElementById("ans1").innerHTML =
-                fn;
-            document.getElementById("ans2").innerHTML =
-                fn;
+                document.getElementById("ans").innerHTML =
+                    fn;
+                document.getElementById("ans1").innerHTML =
+                    fn;
+                document.getElementById("ans2").innerHTML =
+                    fn;
+
+
+            } else {
+                document.getElementById("ans").innerHTML = text;
+                document.getElementById("ans1").innerHTML = text;
+                document.getElementById("ans2").innerHTML = text;
+            }
 
         }
     </script>
 
-    <!-- Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
 
-    <p>My name is: <span id="demo"></span></p>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("fname").value;
-            document.getElementById("demo").innerHTML = x;
-        }
-    </script> -->
 </body>
 
 </html>
